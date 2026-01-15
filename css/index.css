@@ -1,0 +1,99 @@
+
+:root
+{
+  --main-bg-color: #121212;
+  --main-color: whitesmoke;
+  --button-border: none;
+  --button-border-radius: 1em;
+  --horizontal-spacing: .25rem;
+}
+
+body
+{
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+  overflow-x: hidden;
+}
+
+p, h1, a
+{
+  color: var(--main-color);
+}
+
+#top_bar
+{
+  background-color: color-mix(in oklab, var(--main-bg-color), white 10%);
+  width: 100vw;
+  max-width: 100%;
+  font-size: larger;
+  position: sticky;
+  top: 0px;
+  padding-left: .5em;
+  padding-right: .5em;
+  display: flex;
+  flex-flow: row;
+}
+
+#top_bar h1{
+  margin: 0;
+  font-family: monospace;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+}
+
+@media (prefers-color-scheme: light) 
+{
+  :root{
+    --main-bg-color: white;
+    --main-color: black;
+  }
+  .darkmode_invert
+  {
+    filter: none;
+  }
+}
+
+.buttons
+{
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+.buttons button
+{
+  margin-right: var(--horizontal-spacing);
+}
+.buttons button img
+{
+  height: 100%;
+}
+button
+{
+  border-radius: var(--button-border-radius);
+  border-style: var(--button-border);
+  background-color: transparent;
+}
+button:hover
+{
+  background-color: color-mix(in oklab, var(--main-bg-color), white 20%);
+}
+
+.darkmode_invert
+{
+  filter: invert(1);
+}
+
+
+@keyframes slideIn {
+  from{
+    left: -20rem
+  }
+  to{
+    left: 0
+  }
+}
