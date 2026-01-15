@@ -4,17 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>Rei Anderson</title>
+  <link rel="stylesheet" href={{get_url(path="header_bar.css" )}}>
 </head>
+
 <body>
-  
+
   <section>
     <div class="header_bar">
-      <h1>Hello world</h1>
+      <h1 class="title">rei_anderson@~{{section.path}} {%if page%} /{{page.title}}.md {%endif%} </h1>
+      <div class="links">
+
+        {% set root_section = get_section(path="_index.md")%}
+        <a href="{{root_section.permalink | safe}}">Home</a>
+
+        {% for subsection in root_section.subsections %}
+
+        {% set section = get_section(path=subsection) %}
+        <a href="{{section.permalink | safe}}">{{section.title}}</a>
+
+        {% endfor %}
+      </div>
     </div>
   </section>
 
   <section>
-    <div class = "container">
+    <div class="container">
       {% block content %} {% endblock content %}
     </div>
   </section>
