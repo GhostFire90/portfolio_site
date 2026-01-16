@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Rei Anderson</title>
+  <link rel="stylesheet" href={{get_url(path="theming.css" )}}>
   <link rel="stylesheet" href={{get_url(path="header_bar.css" )}}>
   {%block headers%}
   {%endblock headers%}
@@ -11,15 +12,10 @@
 
 <body>
 
-  <section style="position: sticky; top:0;">
+  <section class="header_section">
     <div class="header_bar">
       <h1 class="title">
-        rei_anderson@~ 
-        {%if section%}
-          {{section.path}}
-        {%elif page%}  
-         {{page.path}}
-        {%endif%} </h1>
+        rei_anderson@~{%if section%}{{section.path}}{%elif page%}{{page.path}}{%endif%}</h1>
       <div class="links">
 
         {% set root_section = get_section(path="_index.md")%}

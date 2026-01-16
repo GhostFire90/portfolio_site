@@ -5,7 +5,7 @@ template="project.html"
 [extra]
 repo="https://github.com/GhostFire90/SnailMail"
 +++
-SnailMail is a project idea I had when I was craving something more old fassioned, something in the terminal yet still pleasing to look at to a degree. That was the original thought. Then I thought about how I felt weird giving my address out to people on the internet to be pen pals with so I thought "Lets make email but with, extra steps".
+SnailMail is a project idea I had when I was craving something more old fashioned, something in the terminal yet still pleasing to look at to a degree. That was the original thought. Then I thought about how I felt weird giving my address out to people on the internet to be pen pals with so I thought "Lets make email but with, extra steps".
 
 **Technical:**
 
@@ -25,7 +25,7 @@ Client:
 # Overview
 SnailMail works as a file transfer program except with the twist of adding tension through the means of a "delivery" system. Configurable on server side, you can control how many days it takes for the file to be "Delivered", what this means is, the recipient cannot download the file until that amount of time has passed.
 
-SnailMail automatically uses an asymetric public key encryption algorithm to ecrypt your files so no one except the planned recipient can view them. Public keys are stored on the server and then downloaded by sender, while private keys are saved on recipient's computer and used to decrypt, private keys are never transmitted.
+SnailMail automatically uses an asymetric public key encryption algorithm to encrypt your files so no one except the planned recipient can view them. Public keys are stored on the server and then downloaded by sender, while private keys are saved on recipient's computer and used to decrypt, private keys are never transmitted.
 
 [Terminal.Gui by Miguel Deicaza](https://github.com/migueldeicaza/gui.cs) brings it the older, DOS-like TUI that I wanted to use for this project .
 

@@ -7,7 +7,7 @@
 
 {% block content %}
 
-{% for page in section.pages %}
+{% for page in paginator.pages %}
 
 <article>
   <div class="page_box">
@@ -16,18 +16,16 @@
       <sub><a href="{{page.extra['repo']}}">repo</a></sub>
     </div>
     <div class="page_box_content">
-      {% set images = page.content | safe | split(pat="<img") | slice(start=1) %}
-      {% set text = page.content | safe | regex_replace(pattern="<img .*?>", rep="") %}
-
-      <div class="page_box_text">
+      {% set images = page.content | safe | split(pat="<img") | slice(start=1) %} {% set text=page.content | safe |
+        regex_replace(pattern="<img .*?>" , rep="" ) %} <div class="page_box_text">
         {{page.summary | safe}}
-      </div>
-      <div class = "page_box_images">
-        
-          <img {{images | first | split(pat=">") | first | safe }}>
-      </div>
-      
     </div>
+    <div class="page_box_images">
+
+      <img {{images | first | split(pat=">" ) | first | safe }}>
+    </div>
+
+  </div>
   </div>
 </article>
 
