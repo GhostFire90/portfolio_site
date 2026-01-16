@@ -15,7 +15,8 @@
   <section class="header_section">
     <div class="header_bar">
       <h1 class="title">
-        rei_anderson@~{%if section%}{{section.path}}{%elif page%}{{page.path}}{%endif%}</h1>
+        rei_anderson@~{%if section%}{{section.path}}{%elif page%}{{page.path}}{%endif%}
+      </h1>
       <div class="links">
 
         {% set root_section = get_section(path="_index.md")%}
