@@ -1,5 +1,36 @@
 {% extends "base.html" %}
 
+{%block headers%}
+<link rel="stylesheet" href="{{get_url(path='page_box.css')}}">
+
+{%endblock headers%}
+
 {% block content %}
+
+{% for page in section.pages %}
+
+<article>
+  <div class="page_box">
+    <div class="page_box_links">
+      <h2><a href="{{page.permalink | safe}}">{{page.title}}</a></h2>
+      <sub><a href="{{page.extra['repo']}}">repo</a></sub>
+    </div>
+    <div class="page_box_content">
+      {% set images = page.content | safe | split(pat="<img") | slice(start=1) %}
+      {% set text = page.content | safe | regex_replace(pattern="<img .*?>", rep="") %}
+
+      <div class="page_box_text">
+        {{page.summary | safe}}
+      </div>
+      <div class = "page_box_images">
+        
+          <img {{images | first | split(pat=">") | first | safe }}>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+{% endfor %}
 
 {% endblock content%}

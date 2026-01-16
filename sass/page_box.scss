@@ -1,0 +1,36 @@
+.page_box{
+  margin: 2em;
+  border: 1pt;
+  padding: 1em;
+  border-style: solid;
+  max-height: 25em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.page_box_content
+{
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+
+}
+
+.page_box_text
+{
+  max-width: 65%;
+  min-width: 20em;
+  overflow: scroll;
+}
+
+.page_box_images
+{
+  align-items: center;
+}
+
+.page_box_links
+{
+  display: flex;
+  flex-direction: row;
+}
