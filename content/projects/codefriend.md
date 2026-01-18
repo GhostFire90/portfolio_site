@@ -23,3 +23,6 @@ All of these communicate through a central "hub" program that uses a binary prot
 - Routes messages to correct tools
 
 <!-- more -->
+
+## Demo
+![demo gif](codefriend.gif)

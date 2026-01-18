@@ -23,6 +23,6 @@ During both semesters my portion of the code was in the execution of code based 
 <!-- more -->
 
 
-##Syntax:
+## Syntax:
 
 ![[](https://codeberg.org/PersephonesRain/Redim/src/branch/main/SPEC.md)](redim_vecmath.PNG)
