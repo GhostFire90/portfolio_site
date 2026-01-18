@@ -18,7 +18,7 @@ Codefriend is comprised of 3 parts, I will label the parts I wrote.
 3. Extension
   - Adds codefriend functionality to your chosen IDE
 
-All of these communicate through a central "hub" program that uses a binary protocol.
+All of these communicate through a central "hub" program also written by me that uses a binary protocol.
 - Automatic assignment of address uuids to clients
 - Routes messages to correct tools
 
