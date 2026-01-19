@@ -6,7 +6,7 @@ template="project.html"
 repo="https://codeberg.org/PersephonesRain/Redim"
 +++
 
-Redim is an interpreted Lua-like language I worked on with one other programmer over 9 months. I had always wanted to design and implement a programming language and my project course at DigiPen Institute of Technology allowed me to do just that. 
+Redim is an interpreted Lua-like language I worked on with another programmer over 9 months. I had always wanted to design and implement a programming language and my project course at DigiPen Institute of Technology allowed me to do just that. 
 Redim was originally written in C++ over a semester but as the project got more complex, the STL caused many problems. To fix this in the second semester we pivoted to using Rust which showed immediate productivity boosts.
 
 **Technical:**  

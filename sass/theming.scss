@@ -18,6 +18,10 @@ body {
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    min-height: 100vh;
 }
 
 h1,
@@ -49,6 +53,7 @@ a:hover
 
 .container {
     margin: 1em;
+    flex: 1 0 auto;
 }
 
 @media (prefers-color-scheme: light) {

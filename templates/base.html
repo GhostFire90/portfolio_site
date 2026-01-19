@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <section class="header_section">
     <div class="header_bar">
       <h1 class="title">
@@ -33,7 +32,7 @@
     </div>
   </section>
 
-  <section>
+  <section style="flex: 1 0 auto;">
     <div class="container">
       {% block content %} {% endblock content %}
     </div>
@@ -45,6 +44,7 @@
       <p><img src={{get_url(path="linkdin.png")}}><a href="https://www.linkedin.com/in/evan-anderson-bb702b1b6/">Rei Anderson</a></p>
       <p><img src={{get_url(path="github.svg")}} class="invert_black"><a href="https://github.com/GhostFire90">GhostFire90</a></p>
       <p><img src={{get_url(path="codeberg.svg")}}><a href="https://codeberg.org/PersephonesRain">PersephonesRain</a></p>
+      <p><a href="{{get_url(path="mandelbrot.html")}}">:3</a></p>
     </div>
   </section>
 

@@ -38,3 +38,24 @@
   display: flex;
   flex-direction: row;
 }
+
+@media screen and (orientation: portrait) {
+  .page_box_content{
+    flex-direction: column;
+  }
+  .page_box_content *
+  {
+    margin-top: .25em;
+    margin-bottom: .25em;
+  }
+  .page_box_text
+  {
+    height: 30em;
+    max-width: 100%;
+    width: 100%;
+  }
+  .page_box
+  {
+    max-height: min-content;
+  }
+}
