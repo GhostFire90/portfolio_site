@@ -7,7 +7,7 @@ sort_by="none"
 repo="https://www.github.com/GhostFire90/hobkey"
 +++
 
-Hobkey is an x86_64 kernel I am currently writing as a side project. It originally started as a playground using bios interrupt calls, and eventually spread to trying to make a bootloader. I stepped away from that idea fairly quickly and just dove into making a full blown kernel (using the [limine](https://codeberg.org/Limine/Limine) protocol) in `C`. About a year later I decided to rewrite it in `rust` to grow my understanding of the language as well as to get some more creature-comforts that werent available in `C`
+Hobkey is an x86_64 kernel I am currently writing as a side project. It originally started as a playground using bios interrupt calls, and eventually spread to trying to make a bootloader. I stepped away from that idea and just dove into making a full blown kernel (using the [limine](https://codeberg.org/Limine/Limine) protocol) in C. About a year later I decided to rewrite it in Rust to grow my understanding of the language as well as to get some more creature-comforts that weren't available in C.
 
 **Technical:**  
 Arch: x86_64
@@ -38,8 +38,8 @@ Missing features (features I have yet to port to the rust kernel):
 
 ### steps
 Run:
-`make` or `make all` to compile the binary kernel
-then for quickstart run `make limine qemu` and it will run in qemu if installed
+make or make all to compile the binary kernel
+then for quickstart run make limine qemu and it will run in qemu if installed
 
 
 ## Acknowledgments

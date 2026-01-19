@@ -5,6 +5,7 @@ $font-stack: Consolas, monaco, monospace;
     --foreground: #ebebeb;
     --header_bar: color-mix(in srgb, var(--background), white 8%);
     --link_color: #99C1F1;
+    --link_hover: color-mix(in srgb, var(--link_color), darkblue 32%);
 }
 
 
@@ -36,6 +37,15 @@ li {
 a {
     color: var(--link_color);
 }
+a:hover
+{
+    color: var(--link_hover)
+}
+
+.invert_black
+{
+    filter: invert(1);
+}
 
 .container {
     margin: 1em;
@@ -47,5 +57,11 @@ a {
         --foreground: black;
         --link_color: #144B90;
         --header_bar: color-mix(in srgb, var(--background), black 18%);
+        --link_hover: color-mix(in srgb, var(--link_color), darkblue 55%);
+
+    }
+    .invert_black
+    {
+        filter:none;
     }
 }

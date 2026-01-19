@@ -5,7 +5,7 @@ template="project.html"
 [extra]
 repo="https://github.com/GhostFire90/SnailMail"
 +++
-SnailMail is a project idea I had when I was craving something more old fashioned, something in the terminal yet still pleasing to look at to a degree. That was the original thought. Then I thought about how I felt weird giving my address out to people on the internet to be pen pals with so I thought "Lets make email but with, extra steps".
+SnailMail is a project idea I had when I was craving something more old fashioned, something in the terminal yet still pleasing to look at to a degree. Then I thought about how I felt weird giving my address out to people on the internet to be pen pals with and I had the idea "Let's make email, but with extra steps."
 
 **Technical:**
 
@@ -27,7 +27,7 @@ SnailMail works as a file transfer program except with the twist of adding tensi
 
 SnailMail automatically uses an asymetric public key encryption algorithm to encrypt your files so no one except the planned recipient can view them. Public keys are stored on the server and then downloaded by sender, while private keys are saved on recipient's computer and used to decrypt, private keys are never transmitted.
 
-[Terminal.Gui by Miguel Deicaza](https://github.com/migueldeicaza/gui.cs) brings it the older, DOS-like TUI that I wanted to use for this project .
+[Terminal.Gui by Miguel Deicaza](https://github.com/migueldeicaza/gui.cs) brings it the older, DOS-like TUI that I wanted to use for this project.  
 
 # Preview
 ![preview gif](newLook.gif)
@@ -35,7 +35,7 @@ SnailMail automatically uses an asymetric public key encryption algorithm to enc
 
 # Usage 
 Both the server and client automatically generate a config file with the neccesary entries
- - ip is the ip the client will connect to or the server will bind to.
+ - ip is the IP address the client will connect to or the server will bind to.
  - port is the port the client will connect to or the server will bind to.
  - days is the amount of days the server will delay the delivery by.
 

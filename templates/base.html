@@ -6,6 +6,7 @@
   <title>Rei Anderson</title>
   <link rel="stylesheet" href={{get_url(path="theming.css" )}}>
   <link rel="stylesheet" href={{get_url(path="header_bar.css" )}}>
+  <link rel="stylesheet" href={{get_url(path="footer_bar.css" )}}>
   {%block headers%}
   {%endblock headers%}
 </head>
@@ -35,6 +36,15 @@
   <section>
     <div class="container">
       {% block content %} {% endblock content %}
+    </div>
+  </section>
+
+  <section class="footer_section">
+    <div class="footer_bar">
+      <p><img src={{get_url(path="email.svg")}} class="invert_black"><a href="mailto://rei.anderson@proton.me">rei.anderson@proton.me</a></p>
+      <p><img src={{get_url(path="linkdin.png")}}><a href="https://www.linkedin.com/in/evan-anderson-bb702b1b6/">Rei Anderson</a></p>
+      <p><img src={{get_url(path="github.svg")}} class="invert_black"><a href="https://github.com/GhostFire90">GhostFire90</a></p>
+      <p><img src={{get_url(path="codeberg.svg")}}><a href="https://codeberg.org/PersephonesRain">PersephonesRain</a></p>
     </div>
   </section>
 

@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h2><a href="{{page.extra.repo | safe}}">Repository</a></h2>
 
 {{page.content | safe}}
+
 
 {% endblock content %}
