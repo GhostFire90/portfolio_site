@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{%block headers%}
+<link rel="stylesheet" href="{{get_url(path='home.css')}}">
+
+{%endblock headers%}
+
 {% block content %}
+
+<div class = "centered_div">
+  <div class="content">
+    {{section.content | safe}}
+  </div>
+
+</div>
 
 {% endblock content %}
