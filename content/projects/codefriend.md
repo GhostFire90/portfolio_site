@@ -1,6 +1,7 @@
 +++
 title="Codefriend"
 template="project.html"
+weight=5
 [extra]
 repo="https://github.com/GhostFire90/Codefriend"
 +++

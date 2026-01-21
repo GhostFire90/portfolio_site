@@ -1,8 +1,7 @@
 +++
 title="Hobkey"
 template="project.html"
-sort_by="none"
-
+weight=0
 [extra]
 repo="https://www.github.com/GhostFire90/hobkey"
 +++

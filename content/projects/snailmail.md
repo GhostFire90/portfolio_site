@@ -1,7 +1,7 @@
 +++
 title="SnailMail"
 template="project.html"
-
+weight=7
 [extra]
 repo="https://github.com/GhostFire90/SnailMail"
 +++
