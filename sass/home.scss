@@ -1,17 +1,14 @@
-
-.centered_div
-{
+.centered_div {
   display: flex;
   justify-content: center;
 }
 
-.content
-{
+.content {
   max-width: 75%;
 
 }
-.content *
-{
-  margin-top:.5em;
+
+.content * {
+  margin-top: .5em;
   margin-bottom: .5em;
 }

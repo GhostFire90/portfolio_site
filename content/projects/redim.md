@@ -11,7 +11,7 @@ Redim was originally written in C++ over a semester but as the project got more 
 
 **Technical:**  
 
-During both semesters my portion of the code was in the execution of code based on a parsed AST given by my teammate's code, this included:
+During both semesters my work was in the execution of code based on a parsed AST given by my teammate's portion, this included:
   - Function/Table scopes
   - Import database for caching imports
   - Recursive execution based on AST Node types
