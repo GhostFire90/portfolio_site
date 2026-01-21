@@ -13,7 +13,7 @@
   <div class="page_box">
     <div class="page_box_links">
       <h2><a href="{{page.permalink | safe}}">{{page.title}}</a></h2>
-      <sub><a href="{{page.extra['repo']}}">repo</a></sub>
+      {%if page.extra['repo'] %}<sub><a href="{{page.extra['repo']}}">repo</a></sub>{%endif%}
     </div>
     <div class="page_box_content">
       {% set images = page.content | safe | split(pat="<img") | slice(start=1) %} {% set text=page.content | safe |

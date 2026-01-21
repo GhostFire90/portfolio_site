@@ -42,6 +42,7 @@
 @media screen and (orientation: portrait) {
   .page_box_content{
     flex-direction: column;
+    margin: 1em;
   }
   .page_box_content *
   {

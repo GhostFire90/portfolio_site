@@ -22,3 +22,17 @@
 {
   height: 1em;
 }
+
+@media only screen and (max-width:600px) {
+ .footer_bar
+ {
+  font-size: x-small;
+  flex-direction: column;
+  padding: 0;
+ }
+  .footer_bar p
+  {
+    padding: 0;
+    margin: .25em;
+  }   
+}
