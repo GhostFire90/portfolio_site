@@ -57,6 +57,12 @@ a:hover
     flex: 1 0 auto;
 }
 
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         --background: #ebebeb;
