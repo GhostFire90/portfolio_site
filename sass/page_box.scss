@@ -3,7 +3,7 @@
   border: 1pt;
   padding: 1em;
   border-style: solid;
-  max-height: 25em;
+  max-height: max-content;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -18,9 +18,10 @@
 }
 
 .page_box_text {
-  max-width: 65%;
+  max-width: 55%;
   min-width: 20em;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .page_box_images {
