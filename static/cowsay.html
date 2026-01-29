@@ -1,9 +1,76 @@
 <!DOCTYPE html>
 <head>
   <link href="theming.css" rel="stylesheet">
+  <style>
+    .colbox {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=.8">
 </head>
-<body style="white-space: pre; font: 16px monospace;"">
+<body style="white-space: pre; font-family: monospace; padding: 3em">
   <div id="cowsay"></div>
-  <script src="js/cowsay.js"></script>
+  
+  <div style="display: flex;">
+    <div class="colbox">
+      <h2>Cow says what?</h2>
+      <textarea id="message_entry"></textarea>
+    </div>
+    <div class="colbox">
+      <h2> </h2>
+      <select style="flex-grow: 0;" id="cowfile_select">
+        <option>apt.cow</option>
+        <option>bud-frogs.cow</option>
+        <option>bunny.cow</option>
+        <option>calvin.cow</option>
+        <option>cheese.cow</option>
+        <option>cock.cow</option>
+        <option>cower.cow</option>
+        <option>daemon.cow</option>
+        <option>default.cow</option>
+        <option>dragon-and-cow.cow</option>
+        <option>dragon.cow</option>
+        <option>duck.cow</option>
+        <option>elephant.cow</option>
+        <option>elephant-in-snake.cow</option>
+        <option>eyes.cow</option>
+        <option>flaming-sheep.cow</option>
+        <option>fox.cow</option>
+        <option>ghostbusters.cow</option>
+        <option>gnu.cow</option>
+        <option>hellokitty.cow</option>
+        <option>kangaroo.cow</option>
+        <option>kiss.cow</option>
+        <option>koala.cow</option>
+        <option>kosh.cow</option>
+        <option>luke-koala.cow</option>
+        <option>mech-and-cow.cow</option>
+        <option>milk.cow</option>
+        <option>moofasa.cow</option>
+        <option>moose.cow</option>
+        <option>pony.cow</option>
+        <option>pony-smaller.cow</option>
+        <option>ren.cow</option>
+        <option>sheep.cow</option>
+        <option>skeleton.cow</option>
+        <option>snowman.cow</option>
+        <option>stegosaurus.cow</option>
+        <option>stimpy.cow</option>
+        <option>suse.cow</option>
+        <option>three-eyes.cow</option>
+        <option>turkey.cow</option>
+        <option>turtle.cow</option>
+        <option>tux.cow</option>
+        <option>unipony.cow</option>
+        <option>unipony-smaller.cow</option>
+        <option>vader.cow</option>
+        <option>vader-koala.cow</option>
+        <option>www.cow</option>
+      </select>
+      <button onclick="reload_with_args()">Enter</button>
+    </div>
+  </div>
   <a href="https://github.com/tnalpgge/rank-amateur-cowsay">cowsay</a>
+  <script src="js/cowsay.js"></script>
 </body>
