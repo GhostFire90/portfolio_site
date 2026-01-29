@@ -60,8 +60,35 @@ async function buildCow(arg)
   let cow = await response.text();
 
   cow = cow.match(/(?<=(EOC)|(;)|(EOC"))\n([\s\S]*)(?=\nEOC)/gm)[0];
-  cow = cow.replaceAll("\\\\", "\\")
-  cow = cow.replaceAll("\\@", "\@")
+
+  // single character escapes
+  cow = cow.replaceAll(/\\([ntb\"\?ra\\\`\$])/gm, (_, match) => {
+    console.log(match);
+    switch (match)
+    {
+      case "n":
+        return '\n';
+      case "t":
+        return '\t';
+      case "b":
+        return '\b';
+      case "r":
+        return "\r";
+      case "a":
+        return "\a";
+      default:
+        return match
+    }
+  })
+
+  // matches \xXX hex values and escapes them
+  cow = cow.replaceAll(/\\x([\daAbBcCdDeEfF]{1,2})/gm, "\%$1");
+
+  // matches \uXXXX unicode values and escapes them
+  cow = cow.replaceAll(/\\u([\daAbBcCdDeEfF]{1,4})/gm, "\%u$1");
+
+  cow = decodeURIComponent(cow);
+
   cow = cow.replaceAll(/\$\{{0,1}thoughts\}{0,1}/gm, '\\');
   cow = cow.replace(/\$\{{0,1}eyes\}{0,1}/, `${arg.eyes}`);
   cow = cow.replace(/\$\{{0,1}tongue\}{0,1}/, `${arg.tongue}`);
