@@ -59,10 +59,10 @@ async function buildCow(arg)
   let response = await fetch(`../cows/${arg.cow}`);
   let cow = await response.text();
 
-  cow = cow.match(/(?<=(EOC)|(;)|(EOC"))\n([\s\S]*)(?=\nEOC)/gm)[0];
+  cow = cow.match(/(?<=(EOC)|(EOC;)|(EOC"))\n([\s\S]*)(?=\nEOC)/gm)[0];
 
   // single character escapes
-  cow = cow.replaceAll(/\\([ntb\"\?ra\\\`\$])/gm, (_, match) => {
+  cow = cow.replaceAll(/\\([ntb\"\?ra\\\`\$\@])/gm, (_, match) => {
     console.log(match);
     switch (match)
     {
@@ -76,6 +76,7 @@ async function buildCow(arg)
         return "\r";
       case "a":
         return "\a";
+
       default:
         return match
     }
