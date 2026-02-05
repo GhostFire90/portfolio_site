@@ -60,7 +60,7 @@ async function buildCow(arg)
   let cow = await response.text();
   console.log(cow);
 
-  cow = cow.match(/(?<=(EOC)|(EOC;)|(EOC"))\n([\s\S]*)(?=\nEOC)/gm)[0];
+  cow = cow.match(/(?<=(EOC)|(EOC;)|(EOC")|(EOC";))\n([\s\S]*)(?=\nEOC)/gm)[0];
 
   // single character escapes
   cow = cow.replaceAll(/\\([ntb\"\?ra\\\`\$\@])/gm, (_, match) => {
