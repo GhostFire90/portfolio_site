@@ -58,8 +58,9 @@ async function buildCow(arg)
 {
   let response = await fetch(`../cows/${arg.cow}`);
   let cow = await response.text();
+  console.log(cow);
 
-  cow = cow.match(/(?<=(EOC)|(EOC;)|(EOC"))\n([\s\S]*)(?=\nEOC)/gm)[0];
+  cow = cow.match(/(?<=(EOC)|(EOC;)|(EOC")|(EOC";))\n([\s\S]*)(?=\nEOC)/gm)[0];
 
   // single character escapes
   cow = cow.replaceAll(/\\([ntb\"\?ra\\\`\$\@])/gm, (_, match) => {
@@ -120,4 +121,4 @@ function reload_with_args()
   url += `?message=${message}&cowfile=${cowfile}`;
   window.location.href = url;
 }
-buildCow(new CowsayArgs(new URLSearchParams(window.location.search))).then(text => document.getElementById("cowsay").innerText = text);
+buildCow(new CowsayArgs(new URLSearchParams(window.location.search ?? ""))).then(text => document.getElementById("cowsay").innerText = text);
