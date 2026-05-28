@@ -18,18 +18,17 @@ Current features:
  - Panic handling
  - Free-list allocator
  - Serial IO
-
-Missing features (features I have yet to port to the rust kernel):
+ - Dynamic mapping of arbitrary physical pages
+ - ACPI parsing
  - PSF font parsing
  - Frame-buffer print functionality
- - ACPI parsing
 
 <!-- more -->
 
 ## Build
 
 ### Prereqs
- - [Follow the Limine Install guide](https://github.com/limine-bootloader/limine#installing-limine-binaries)
+ - [Follow the Limine Install guide](https://github.com/limine-bootloader/limine#installing-limine-binaries)  
  - qemu (for emulated running)
  - lldb (for debugging)
  - make
@@ -47,4 +46,5 @@ As mentioned previously this uses the limine protocol and my image creation uses
 
 ## Screenshots
 
+![Mandelbrot Set](mandel.png)
 ![Memory layout](info_mem.png)
